@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "tv-debugger-extension",
+  "version": "1.0",
+  "description": "Enable the TV debugger.",
+  "action": {},
+  "permissions": ["activeTab", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
